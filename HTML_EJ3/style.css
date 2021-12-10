@@ -1,0 +1,28 @@
+div {
+    border: solid 1px black;
+}
+.figure1 {
+    height: 200px;
+    width: 200px;
+}
+.figure2 {
+    padding: 25px;
+    border: solid 5px black;
+}
+.figure3 {
+    margin: 25px;
+    border-color: orange;
+}
+.figure4 {
+    padding-left: 50px;
+}
+.figure5 {
+    margin: 0px 0px 0px 50px;
+}
+.figure6 {
+    margin: 20px 45% 20px 45%;
+    padding: 5px;
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+}

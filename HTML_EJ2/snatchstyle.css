@@ -1,0 +1,43 @@
+h1 {
+    color: red;
+}
+h2 {
+    color: grey;
+    text-decoration: underline;
+    font-weight: bold;
+}
+h2:nth-of-type(1) {
+    opacity: 0.25;
+}
+h2:nth-of-type(2) {
+    opacity: 0.50;
+}
+h2:nth-of-type(3) {
+    opacity: 0.75;
+}
+p {
+    font-style: italic;
+}
+.Franky {
+    background-color: blue;
+    color: peru;
+}
+.Avi {
+    background-color: brown;
+    color: yellow;
+}
+.Boris {
+    background-color: yellow;
+    color: lime;
+} 
+.Tony {
+    background-color: green;
+    color: red;
+}
+ol {
+    list-style-type: upper-roman;
+}
+a {
+    text-transform: uppercase;
+    color: limegreen;
+}

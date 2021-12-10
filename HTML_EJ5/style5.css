@@ -1,0 +1,45 @@
+table {
+	width:100%;
+	border-collapse: collapse;
+
+}
+th {
+	background-color: black;
+	color: white;
+	font-size: 3.5em;
+	text-align: left;
+	padding: 3px;
+}
+
+.subtitle {
+	background-color: grey;
+	font-size: 2em;
+	text-align: left;
+	padding: 3px;
+}
+
+.menu {
+	background-color: #D5D5D5;
+	text-align: center;
+}
+
+.lorem {
+	height: 200px;
+	margin: 8px;
+}
+
+div {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #C4C4C4;
+}
+
+
+.footer {
+	margin: 10px;
+	padding: 25px;
+	background-color: #C4C4C4;
+}
