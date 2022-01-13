@@ -31,71 +31,14 @@ header li {
     font-size: 16px;
     margin-left: 1%;
     margin-right: 1%;
-
-}
-
-div {
-    margin-left: 15%;
-    margin-right: 15%;
-    display: flex;
-    background-color: blueviolet;
-   
-}
-
-aside {
-    justify-content: center;
-    float: left;
-    display: block;
-    padding-right: 2%;
-    width: 20%;
 }
 
 main {
+    margin-left: 15%;
     display: flex;
-    background-color: mediumturquoise;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
-article {
-    background-color: palegreen;
-    padding: 1%;
-    border: solid black 1px;
-    width: 40%;
-    display: block;
-    
+footer {
+    background-color: #3B3B3B;
+    text-align: center;
 }
-
-aside img {
-    width: 50%;
-}
-
-article img{
-    width: 100%;
-}
-
-aside div {
-    margin-left: 0%;
-    margin-right: 0%;
-    display: block;
-    background-color:limegreen;
-}
-
-article p {
-    color: grey;
-    font-size: 12px;
-    font-size: 13px;
-    background-color: orange;
-
-}
-
-article p:nth-of-type(1) {
-    font-weight: bold;
-    color: black;
-    font-size: 17px;
-    background-color: blue;
-
-}
-
-
-
