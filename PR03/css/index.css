@@ -1,0 +1,78 @@
+aside {
+    float: center;
+    display: block;
+    padding-right: 5%;
+    width: 30%;
+    text-align: justify;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+article {
+    padding: 1%;
+    width: 40%;
+    display: block;
+}
+
+aside img {
+    width: 90%;
+    margin-left: 5px;
+
+}
+
+article img{
+    width: 85%;
+}
+
+aside div {
+    display: block;
+    background-color:#EEEEEE;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.apuntame {
+    background-color: #D288FF;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px;
+}
+
+.asidetitle {
+    font-weight: bold;
+    text-align: center;
+}
+
+article p {
+    color: grey;
+    font-size: 13px;
+    width: 85%;
+    text-align: justify;
+}
+
+article p:nth-of-type(1) {
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+}
+
+article p:nth-of-type(2) {
+    font-size: 11px;
+    box-sizing: border-box;
+    margin: 0%;
+    text-align: center;
+}
+
+
+article hr {
+    box-sizing: border-box;
+    margin: 0%;
+    border-top: 1px solid #D288FF;
+    width: 85%;
+}
