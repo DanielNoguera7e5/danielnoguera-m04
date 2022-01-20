@@ -62,6 +62,16 @@ article p:nth-of-type(1) {
     text-align: center;
 }
 
+p a {
+    outline: none;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: #D288FF;
+}
+
+
 article p:nth-of-type(2) {
     font-size: 11px;
     box-sizing: border-box;
