@@ -1,0 +1,33 @@
+form {
+    margin-top: 60px;
+    width: 75%;
+}
+
+main p {
+    font-weight: bold;
+}
+
+label {
+    display: flex;
+    margin-top: 35px;
+}
+
+input {
+    border: ridge;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    height: 30px;
+    width: 100%;
+}
+
+.submit, .restableix{
+    width: 80px;
+    height: 40px;
+    margin-left: 47%;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+}

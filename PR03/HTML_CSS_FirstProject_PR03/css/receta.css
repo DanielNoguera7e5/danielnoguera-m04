@@ -1,0 +1,55 @@
+main {
+    display: inline-block;
+    width: 70%;
+}
+
+main > img {
+    float: left;
+    width: 50%;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+article img {
+    width: 15%;
+    margin-right: 12px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+article {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+main hr {
+    margin: 0%;
+    border-top: 1px solid #D288FF;
+}
+
+main p {
+    font-size: 18px;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+div p{
+    font-size: 15px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+
