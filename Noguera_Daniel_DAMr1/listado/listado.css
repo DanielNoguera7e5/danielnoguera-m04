@@ -1,0 +1,45 @@
+main {
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+section {
+    display: inline-flex;
+    width: 100%;
+    background-color: #D288FF;
+    align-items: center;
+    border: 2px solid #e2b3ff;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    justify-content: space-evenly;
+}
+
+section p {
+    font-size: 20px;
+    padding: 5px;
+}
+
+section h1 {
+    margin-right: 20px;
+}
+
+section img{
+    width: 30px;
+    float: right;
+}
+
+a:hover {
+    color: white;
+}
+
+a:link {
+    color: white;
+    text-decoration: white;
+}
