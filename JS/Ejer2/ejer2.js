@@ -15,41 +15,54 @@ function numberInCs(cs, userNumber) {;
     return j;
 }
 
-function numberInPosition(cs) { 
-    let userNumberList = [];
-    let resultList = [];
 
+function userNumbers() {
+    let userNumberList = [];
     for(h = 0; h < 5; h++) {
         let userNumber = prompt("Inserta 5 numeros del 1 al 10");
         userNumberList.push(userNumber);
+    }
+    return userNumberList;
+}
 
-        if (userNumber == cs[h]) {
+function resultList(userNumberList, cs) {
+    let resultList = [];
+    for(h = 0; h < 5; h++) {
+        if (userNumberList[h] == cs[h]) {
             resultList.push("OK");
         } else {
-            resultList.push(numberInCs(cs, userNumber));
+            resultList.push(numberInCs(cs, userNumberList[h]));
         }         
     }
-    console.log(userNumberList);
     return resultList;
 }
 
-function howManyTries(cs) {
-    let result = numberInPosition(cs);
+
+function didYouWin(cs) {
     for (k = 0; k < 4; k++) {
+        let userNums = userNumbers();
+        let result = resultList(userNums, cs);
+
         if (result == ["OK", "OK", "OK", "OK", "OK"]) {
-            return console.log("Has guanyat!");
+            alert("Has guanyat!");
+            console.log("Has guanyat!");
+            k==5;
         } else {
-            return numberInPosition(cs);
+            alert("Resultat: " + result + "  Nums introduits:" + userNums);
+            console.log(result);
+            console.log(userNums);
         }
     }
-    //bucle mal hecho
 }
 
 
 function main () {
     cs = generateCs();
     console.log(cs);
-    howManyTries(cs);
+    didYouWin(cs);
 }
 
 main();
+
+
+//no he lograt realitzar el programa com volia
