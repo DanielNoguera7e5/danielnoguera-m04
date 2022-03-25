@@ -63,6 +63,3 @@ function main () {
 }
 
 main();
-
-
-//no he lograt realitzar el programa com volia
