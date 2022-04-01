@@ -32,11 +32,11 @@ function substractChar(string, number) {
 
 function replaceFirstAndLast(string) {
     if (string.length > 0) {
-        let first = string[0]
-        let last = string.slice(-1);
+        let first = string.charAt(0)
+        let last = string.charAt(string.length - 1);
         let stringWithoutLastAndFirst = string.slice(1,-1);
         return last.concat(stringWithoutLastAndFirst, first);
     }
 }
 
-// console.log(replaceFirstAndLast("holaquepasa"));
+console.log(replaceFirstAndLast("holaquepasa"));

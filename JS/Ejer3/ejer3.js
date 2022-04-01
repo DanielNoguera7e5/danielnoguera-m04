@@ -9,3 +9,9 @@ console.log(todaysDate())
 
 // 2 //
 
+function iAmInM04() {
+    let date = new Date();
+    if (date.getDay == 3 || date.getDay == 4) {
+        
+    }
+}
