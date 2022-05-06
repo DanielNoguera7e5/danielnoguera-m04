@@ -27,11 +27,18 @@ function inputSonNums() {
 
 function Comprobar() {
     document.getElementById("numero").focus();
-    validInput();
     info();
-    generarFila();
-    
+    if (validInput()) {
+        if (intento == 0) {
+            primerIntento();
+        } else {
+            generarFila();
+        }
+        intento++
+    }
 }
+// ERROR CON PRIMER INTENTO Y QUITAR LA PRIMERA FILA
+
 
 function validInput() {
     if (userInput().length == 5 && inputSonNums()) {
@@ -41,17 +48,33 @@ function validInput() {
     }
 }
 
+function iterarUserInput(i) {
+    let input = userInput()
+    return input[i];
+}
+
+function primerIntento(intento) {
+    document.getElementById("Result").firstChild.remove
+}
+
+
 function generarFila() {
-    let nuevaFila = document.createElement("div");
-    nuevaFila.classList.add("rowResult w100 flex wrap");
-    document.getElementById("Result").appendChild(nuevaFila);
+
+    let div1 = document.createElement("div");
+    div1.classList.add("rowResult", "w100", "flex", "wrap");
+    section = document.getElementById("Result")
+    section.appendChild(div1);
 
     for(let i = 0; i < 5; i++) {
         
-        let div1 = document.createElement("div");
-        div1.classList.add("w20");
-        
-        
+        let div2 = document.createElement("div");
+        div2.classList.add("w20");
+        div1.appendChild(div2);
+
+        let div3 = document.createElement("div");
+        div3.classList.add("celResult", "flex");
+        div3.textContent = iterarUserInput(i);
+        div2.appendChild(div3);
     }
 }
 
@@ -66,4 +89,4 @@ function main() {
     codigoSecreto();
 }
 
-main()
+main();
