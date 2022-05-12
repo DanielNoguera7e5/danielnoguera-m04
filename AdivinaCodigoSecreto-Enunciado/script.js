@@ -1,6 +1,7 @@
 const codigo = [];
 const maxIntento = 8;
 var intento = 0;
+var gameFinished = false;
 
 /*1. Genera una constante CODIGO_SECRETO de tipo array de 5 número aleatorios entre 0 y 9 usando la libreria Math.random();*/
 function codigoSecreto() {
@@ -26,19 +27,26 @@ function inputSonNums() {
 }
 
 function Comprobar() {
-    document.getElementById("numero").focus();
-    info();
-    if (validInput()) {
-        if (intento == 0) {
-            primerIntento();
-        } else {
-            generarFila();
+    if (gameFinished != true && intento < maxIntento) {
+        console.log(intento);
+        console.log(maxIntento);
+        document.getElementById("numero").focus();
+        if (validInput()) {
+            info();
+            game();
         }
-        intento++
     }
 }
-// ERROR CON PRIMER INTENTO Y QUITAR LA PRIMERA FILA
 
+function game() {
+    if (intento == 0) {
+        primerIntento();
+    }
+    generarFila();
+    intento++;
+    info(intento, maxIntento);
+    userWon = didUserWin(userInput())
+}
 
 function validInput() {
     if (userInput().length == 5 && inputSonNums()) {
@@ -53,13 +61,13 @@ function iterarUserInput(i) {
     return input[i];
 }
 
-function primerIntento(intento) {
-    document.getElementById("Result").firstChild.remove
+function primerIntento() {
+    let firstRow = document.getElementById("firstRow");
+    firstRow.remove();
 }
 
 
 function generarFila() {
-
     let div1 = document.createElement("div");
     div1.classList.add("rowResult", "w100", "flex", "wrap");
     section = document.getElementById("Result")
@@ -75,18 +83,55 @@ function generarFila() {
         div3.classList.add("celResult", "flex");
         div3.textContent = iterarUserInput(i);
         div2.appendChild(div3);
+
+        colorRow(div3, userInput(), i);
     }
 }
 
 
-
-function info() {
-
+function info(intento, maxIntento) {
+    let info = document.getElementById("info");
+    switch(intento) {
+        case 1: 
+            info.textContent = "Segundo intento"; break;
+        case 2: 
+            info.textContent = "Tercer intento"; break;
+        case 3: 
+            info.textContent = "Cuarto intento"; break;
+        case 4: 
+            info.textContent = "Quinto intento"; break;
+        case 5: 
+            info.textContent = "Sexto intento"; break;
+        case 6: 
+            info.textContent = "Séptimo intento"; break;
+        case 7: 
+            info.textContent = "Último intento"; break;
+        case maxIntento:
+            info.textContent = "Perdiste... Recarga la página para intentarlo de nuevo."; break;
+    }
 }
 
 
-function main() {
-    codigoSecreto();
+function colorRow(box, userInput, i) {
+    if (codigo[i] == userInput[i]) {
+        box.style.background = "green";
+
+    } else if (codigo.includes((userInput[i]))) {
+        box.style.background = "yellow";
+    
+    } else {
+        box.style.background = "#BABABA";
+    }
 }
 
-main();
+function didUserWin(userInput) {
+    for(let i = 0; i < 5; i++) {
+        if (codigo[i] != userInput[i]) {
+            return false;
+        }
+    }
+    document.getElementById("info").textContent = "HAS ACERTADO LOS 5 NUMEROS"
+    return true;
+}
+
+codigoSecreto();
